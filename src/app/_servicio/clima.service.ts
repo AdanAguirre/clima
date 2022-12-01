@@ -13,7 +13,6 @@ export class ClimaService {
   constructor(private http: HttpClient) { }
 
   Clima(ciudad:string):Observable<any>{
-    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${this.key}`);//&mode=json&units=metric=&appid
+    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&mode=json&units=metric&appid&appid=${this.key}`);//
   }
-
 }

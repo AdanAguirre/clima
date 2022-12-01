@@ -9,7 +9,8 @@ import { ClimaService } from 'src/app/_servicio/clima.service';
 export class DashboardComponent implements OnInit {
   ciudad='';
   Temperatura=0;
-
+  Humedad=0;
+  Temperatura_Max=0;
   constructor(private climaService: ClimaService) { }
 
   ngOnInit(): void {
@@ -18,7 +19,8 @@ export class DashboardComponent implements OnInit {
 mostrarClima(){
       this.climaService.Clima(this.ciudad).subscribe (data => {
         this.Temperatura = data.main.temp;
-      
+        this.Humedad = data.main.humidity;   
+        this.Temperatura_Max = data.main.temp_max;
       });
     }
   
