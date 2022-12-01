@@ -1,10 +1,34 @@
-<div class="container">
-    <div class="row">
-        <div class="col lg-6 mt-6">
+<section  style="background-color: #7dd1f5;">
+        <h3>CLIMA</h3>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-6">
 
-            <input type="text" class="form-control" placeholder="ingresar ciudad">
-            <button class="btn btn-primary btn-lg"></button>
+                <!--aca empieza la carta-->
+                <div class="card" style="color: #4B515D; border-radius: 35px;">
+                    
+                    <div class="card-body ">
 
+                        <div class="text-center">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu3.webp" class="card-img-top"  >
+                        </div>
+                        <h5>Clima</h5>
+                        
+                        <form>
+                            <div>
+                                <label >Ciudad</label>
+                                <input [(ngModel)]="ciudad" type="text" class="form-control mt-3" placeholder="ingrese la ciudad">
+                            </div>
+
+                            <div>
+                                <button (click)="mostrarClima()" class="btn btn-primary btn-lg mt-3">Aceptar</button>
+                            </div>
+                        </form>
+                        
+                        <p class="card-text">Temperatura : {{Temperatura}} °C</p>
+                    </div>
+
+                    <!--aca termina-->
+                </div>
+            </div>
         </div>
-    </div>
-</div>
